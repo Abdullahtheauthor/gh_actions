@@ -40,8 +40,17 @@ jobs:
           REPOSITORY: nginx_pub
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $REGISTRY/$REPOSITORY:2 .
-          docker push $REGISTRY/$REPOSITORY:2
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+          docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+      # - name: Build, tag, and push docker image to Amazon ECR
+      #   env:
+      #     REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+      #     REPOSITORY: ${{ inputs.PROJECT }}
+      #     SHORT_SHA: ${{ steps.get_short_sha.outputs.SHORT_SHA }}
+      #   run: |
+      #     docker build -t $REGISTRY/$REPOSITORY:$SHORT_SHA .
+      #     docker push $REGISTRY/$REPOSITORY:$SHORT_SHA
 
 
         
