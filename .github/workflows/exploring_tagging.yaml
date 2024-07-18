@@ -5,6 +5,7 @@ on:
 
 jobs:
   Tagging:
+    if: github.event_name == 'release'
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
