@@ -6,7 +6,7 @@ on:
 
 jobs:
   Tagging:
-    if:  github.event.pull_request.draft == true
+    # if:  github.event.pull_request.draft == true
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
