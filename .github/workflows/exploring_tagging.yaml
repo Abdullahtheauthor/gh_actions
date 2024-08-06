@@ -1,13 +1,13 @@
-on:
-  release:
-      tags:
-      - 'v.*'
+# on:
+#   release:
+#       tags:
+#       - 'v.*'
 
 
-jobs:
-  Tagging:
-    # if:  github.event.pull_request.draft == true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git clone the repository
-        uses: actions/checkout@v3
+# jobs:
+#   Tagging:
+#     # if:  github.event.pull_request.draft == true
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Git clone the repository
+#         uses: actions/checkout@v3
