@@ -4,7 +4,7 @@ on:
 
 jobs:
   Tagging:
-    if: github.event_name == 'release'
+    if:  github.event.pull_request.draft
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
