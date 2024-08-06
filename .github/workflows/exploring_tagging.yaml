@@ -6,7 +6,7 @@ on:
 jobs:
   Tagging:
 
-    # if : startsWith(github.event.release.tag_name, 'v.') && !endsWith(github.event.release.tag_name, 'preprod')
+    # if : startsWith(github.event.release.tag_name, 'v.') && endsWith(github.event.release.tag_name, 'preprod')
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
