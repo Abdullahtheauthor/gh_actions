@@ -7,15 +7,8 @@ on:
 jobs:
   Tagging:
 
-    # if : startsWith(github.event.release.tag_name, 'v.')
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
-      - name: Check if tag ends with "preprod"
-        id: check_tag
-        run: |
-          if [[ "${GITHUB_REF##*/}" == *preprod ]]; then
-            echo "This tag end with 'preprod'."
-            # exit 1
-          fi
+
