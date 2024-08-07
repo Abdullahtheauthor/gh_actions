@@ -1,0 +1,13 @@
+on:
+  release: 
+    types: [released]
+    
+
+
+jobs:
+  Tagging:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v3
