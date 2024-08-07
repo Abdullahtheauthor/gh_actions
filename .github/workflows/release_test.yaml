@@ -1,7 +1,8 @@
+
 on:
   release: 
-    types: [released]
-    
+    types: [prereleased]
+    branches: 'main'
 
 
 jobs:
