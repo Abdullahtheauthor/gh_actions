@@ -27,11 +27,11 @@ jobs:
 # This will be comented as github actions(ghcr specifically) has a limitation that prevents the repo to have uppercase letters, which I can't change 
 # as this requirs chaging my username
 # You should consider pushing to another registry
-    # - name: Build and push Docker image
-    #   uses: docker/build-push-action@v5
-    #   with:
-    #     context: .
-    #     push: true
-    #     tags: |
-    #         ghcr.io/${{ github.repository_owner }}/gh_actions:latest
-    #         ghcr.io/${{ github.repository_owner }}/gh_actions:${{ github.sha }}
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: |
+            ghcr.io/abdullahtheauthor/gh_actions:latest
+            ghcr.io/abdullahtheauthor/gh_actions:${{ github.sha }}
