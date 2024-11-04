@@ -31,5 +31,5 @@ jobs:
         context: .
         push: true
         tags: |
-            ghcr.io/${{ github.repository_owner }}/gh_actions/getting-started:latest
-            ghcr.io/${{ github.repository_owner }}/gh_actions/getting-started:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/gh_actions:latest
+            ghcr.io/${{ github.repository_owner }}/gh_actions:${{ github.sha }}
